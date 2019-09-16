@@ -7,7 +7,7 @@
               <img src="https://instagram.fzag1-1.fna.fbcdn.net/vp/525ea6a99d400296f5e523317a65ef60/5E169B87/t51.2885-19/s150x150/39381491_2016744545013825_6121577575153139712_n.jpg?_nc_ht=instagram.fzag1-1.fna.fbcdn.net" class="rounded-circle">
             </div>
             <div class="col-9 pt-5">
-                <div>freecodecamp</div>
+                <div><h1>{{$user->username}}</h1></div>
                 <div class="d-flex ">
                     <div class="pr-5"><strong>58</strong> posts</div>
 
@@ -16,13 +16,10 @@
 
 
                 </div>
-                <div class="pt-4">freecodecamp.org</div>
-                <div>🗝️ ° ⚔️ ° 🏹
-                    I make miniatures for tabletop gaming. 👀🤲
-                    26, Croatia
-                    Contact me:clayminiaturecrafter@gmail.com
+                <div class="pt-4 font-weight-bold">{{$user->profile->title}}</div>
+                <div>{{$user->profile->description}}
                     </div>
-                <div><a href="www.reddit.com/user/clayminicrafter">www.reddit.com/user/clayminicrafter</a> </div>
+                <div><a href="{{$user->profile->url}}">{{$user->profile->url}}</a> </div>
 
             </div>
 

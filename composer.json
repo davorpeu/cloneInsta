@@ -8,6 +8,7 @@
     ],
     "license": "MIT",
     "require": {
+		"skydiver/laravel-materialize-css": "dev-master",
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",

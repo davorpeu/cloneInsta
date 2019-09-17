@@ -9,10 +9,10 @@
             <div class="col-9 pt-5">
                 <div class="d-flex justify-content-between align-items-baseline">
                     <h1>{{$user->username ?? 'hey'}}</h1>
-                    <a href="#">Add new post</a>
+                    <a href="/p/create">Add new post</a>
                 </div>
                 <div class="d-flex ">
-                    <div class="pr-5"><strong>58</strong> posts</div>
+                    <div class="pr-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
 
                     <div class="pr-5"><strong>111</strong>followers</div>
                     <div class="pr-5"><strong>270</strong>following</div>
@@ -28,12 +28,13 @@
 
                 <div class="row pt-5 pb-3">
 
-                    <div class="col-4"> <img src="https://instagram.fzag1-1.fna.fbcdn.net/vp/24fc9b72df86986cf9742c3f38300e1d/5E383C39/t51.2885-15/sh0.08/e35/s640x640/56900922_115004779680770_2807598313109423157_n.jpg?_nc_ht=instagram.fzag1-1.fna.fbcdn.net&_nc_cat=102" class="w-100 pb-xl-4"></div>
-                    <div class="col-4"> <img src="https://instagram.fzag1-1.fna.fbcdn.net/vp/24fc9b72df86986cf9742c3f38300e1d/5E383C39/t51.2885-15/sh0.08/e35/s640x640/56900922_115004779680770_2807598313109423157_n.jpg?_nc_ht=instagram.fzag1-1.fna.fbcdn.net&_nc_cat=102" class="w-100 pb-xl-4"></div>
-                    <div class="col-4"> <img src="https://instagram.fzag1-1.fna.fbcdn.net/vp/24fc9b72df86986cf9742c3f38300e1d/5E383C39/t51.2885-15/sh0.08/e35/s640x640/56900922_115004779680770_2807598313109423157_n.jpg?_nc_ht=instagram.fzag1-1.fna.fbcdn.net&_nc_cat=102" class="w-100 pb-xl-4"></div>
-                    <div class="col-4"> <img src="https://instagram.fzag1-1.fna.fbcdn.net/vp/24fc9b72df86986cf9742c3f38300e1d/5E383C39/t51.2885-15/sh0.08/e35/s640x640/56900922_115004779680770_2807598313109423157_n.jpg?_nc_ht=instagram.fzag1-1.fna.fbcdn.net&_nc_cat=102" class="w-100 pb-xl-4"></div>
-                    <div class="col-4"> <img src="https://instagram.fzag1-1.fna.fbcdn.net/vp/24fc9b72df86986cf9742c3f38300e1d/5E383C39/t51.2885-15/sh0.08/e35/s640x640/56900922_115004779680770_2807598313109423157_n.jpg?_nc_ht=instagram.fzag1-1.fna.fbcdn.net&_nc_cat=102" class="w-100 pb-xl-4"></div>
+                    @foreach($user->posts as $post)
 
+
+                    <div class="col-4"> <img src="/storage/{{$post->image}}" class="w-100 pb-xl-4">
+                    </div>
+
+                        @endforeach
 
                 </div>
 
